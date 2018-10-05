@@ -1,0 +1,78 @@
+li {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  -webkit-animation-duration: 1s;
+  animation-name: liFadeIn;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  text-decoration: none;
+}
+
+li:active, li:hover {
+  background-color: #eee;
+}
+
+@keyframes liFadeIn {
+  from {
+    margin-top: 12px;
+    opacity: .3;
+  }
+
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+#artwork .img-fluid {
+  margin-left: 10px;
+  width: 80px;
+}
+
+.form-control:focus {
+  border-color: #ced4da;
+  box-shadow: none;
+}
+
+.track-info {
+  align-self: center;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.track-info a {
+  color: #202020;
+  height: 24px;
+}
+
+.track-info a:hover {
+  color: #202020;
+}
+
+.track-title {
+  font-size: 14px;
+  font-weight: 700;
+  max-width: 100%;
+  max-height: 50px;
+  margin-bottom: -7px;
+}
+
+.track-user {
+  font-size: 14px;
+  color: #970fda;
+}
+
+.track-plays {
+  font-size: 12px;
+}
+
+@media (max-width: 767.98px) {
+  .track-title {
+    max-width: 250px;
+  }
+}

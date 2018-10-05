@@ -1,0 +1,32 @@
+#navbar-top {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.form-control {
+  font-size: 14px;
+  height: 32px;
+  border: 1px solid #ffffff;
+  border-radius: 1rem;
+  width: 350px!important;
+  background-color: #eee!important;
+}
+
+.form-control:focus {
+  background-color: #fff!important;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+#search-icon {
+  position: absolute;
+  font-size: 22px;
+  color: #6c757d;
+  bottom: 5px;
+  right: 25px;
+  cursor: pointer;
+}

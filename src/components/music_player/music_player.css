@@ -1,0 +1,119 @@
+#navbar-player {
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,.1);
+  -webkit-animation-duration: 0.3s;
+  animation-name: playerFadeIn;
+}
+
+@keyframes playerFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.img-player {
+  width: 60px;
+}
+
+#player-track-info {
+  text-align: center;
+}
+
+#player-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#current-title {
+  font-size: 14px;
+  max-width: 710px;
+  margin-bottom: -7px;
+  animation-duration: 0.5s;
+  animation-name: titleFade;
+}
+
+#current-user {
+  font-size: 12px;
+  color: #970fda;
+}
+
+.play-pause-btn {
+  cursor: pointer;
+  font-size: 24px;
+  color: #202020;
+}
+
+.play-pause-xs-btn {
+  cursor: pointer;
+  font-size: 28px;
+  color: #202020;
+}
+
+.progress-bar {
+    height: 3px!important;
+    width: 500px;
+    box-shadow: initial!important;
+    margin: 0!important;
+}
+
+.progress-bar .rangeslider__fill {
+  background-color: #4e4e4e!important;
+}
+
+.progress-bar .rangeslider__handle {
+  background-color: #4e4e4e!important;
+  border: 0px!important;
+  width: 12px!important;
+  height: 12px!important;
+  box-shadow: initial!important;
+}
+
+.progress-bar .rangeslider__handle:after {
+  content: none!important;
+}
+
+.volume-bar {
+  height: 5px!important;
+  width: 80px;
+  box-shadow: initial!important;
+  margin: 0!important;
+}
+
+.volume-bar .rangeslider__fill {
+  background-color: #4e4e4e!important;
+}
+
+.volume-bar .rangeslider__handle {
+  background-color: #aaa!important;
+  border: 0px!important;
+  width: 14px!important;
+  height: 14px!important;
+  box-shadow: initial!important;
+}
+
+.volume-bar .rangeslider__handle:after {
+  content: none!important;
+}
+
+#currentTime {
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+@media (max-width: 767.98px) {
+  .progress-bar {
+      height: 3px!important;
+      width: 250px;
+      box-shadow: initial!important;
+  }
+
+  #current-title {
+    max-width: 220px;
+  }
+}
