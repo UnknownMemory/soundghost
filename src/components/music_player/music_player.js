@@ -66,10 +66,14 @@ class MusicPlayer extends Component {
         <nav id="navbar-player" className="navbar navbar-light fixed-bottom">
           <div id="player-artwork">
             <img className="rounded img-fluid img-player" src={this.props.currentArtwork ? this.props.currentArtwork : this.props.currentAvatar} alt="playerArtwork"></img>
+            <div id="player-title-user">
+              <span id="current-title" className="font-weight-bold text-truncate d-none d-sm-block">{this.props.currentTitle}</span>
+              <span id="current-user" className="text-muted text-truncate d-none d-sm-block">{this.props.currentUser}</span>
+            </div>
           </div>
           <div id="player-track-info">
-            {this.props.currentTitle !== false && <span id="current-title" className="d-inline-block font-weight-bold text-truncate">{this.props.currentTitle}</span>}
-            {this.props.currentUser !== false && <span id="current-user" className="d-block text-muted text-truncate">{this.props.currentUser}</span>}
+            <span id="current-title" className="d-inline-block font-weight-bold text-truncate d-block d-sm-none">{this.props.currentTitle}</span>
+            <span id="current-user" className="d-block text-muted text-truncate d-block d-sm-none">{this.props.currentUser}</span>
             <div>
               <audio ref={this.audio} onTimeUpdate={this.progressBar}>
                 <source src={this.state.link} type="audio/mpeg"></source>

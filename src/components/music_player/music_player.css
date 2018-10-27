@@ -3,7 +3,9 @@
   border-top: 1px solid rgba(0,0,0,.1);
   -webkit-animation-duration: 0.3s;
   animation-name: playerFadeIn;
+  flex-wrap: nowrap;
 }
+
 
 @keyframes playerFadeIn {
   from {
@@ -16,11 +18,30 @@
 }
 
 .img-player {
-  width: 60px;
+  width: 50px;
+}
+
+#player-artwork {
+  display: flex;
+  align-items: center;
 }
 
 #player-track-info {
   text-align: center;
+}
+
+#player-title-user {
+  padding-left: 15px;
+  left: 65px;
+  position: absolute;
+}
+
+#player-title-user #current-title {
+  font-size: 12px;
+  max-width: 250px;
+  margin-bottom: 1px;
+  animation-duration: 0.5s;
+  animation-name: titleFade;
 }
 
 #player-controls {
@@ -42,6 +63,17 @@
   color: #970fda;
 }
 
+@keyframes titleFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 .play-pause-btn {
   cursor: pointer;
   font-size: 24px;
@@ -55,22 +87,22 @@
 }
 
 .progress-bar {
-    height: 3px!important;
+    height: 2px!important;
     width: 500px;
     box-shadow: initial!important;
     margin: 0!important;
 }
 
 .progress-bar .rangeslider__fill {
-  background-color: #4e4e4e!important;
+  background-color: #cc0001!important;
 }
 
 .progress-bar .rangeslider__handle {
-  background-color: #4e4e4e!important;
+  background-color: #fff!important;
   border: 0px!important;
-  width: 12px!important;
-  height: 12px!important;
-  box-shadow: initial!important;
+  width: 10px!important;
+  height: 10px!important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 .progress-bar .rangeslider__handle:after {
@@ -78,22 +110,22 @@
 }
 
 .volume-bar {
-  height: 5px!important;
+  height: 4px!important;
   width: 80px;
   box-shadow: initial!important;
   margin: 0!important;
 }
 
 .volume-bar .rangeslider__fill {
-  background-color: #4e4e4e!important;
+  background-color: #cc0001!important;
 }
 
 .volume-bar .rangeslider__handle {
-  background-color: #aaa!important;
+  background-color: #fff!important;
   border: 0px!important;
-  width: 14px!important;
-  height: 14px!important;
-  box-shadow: initial!important;
+  width: 10px!important;
+  height: 10px!important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 .volume-bar .rangeslider__handle:after {
@@ -106,7 +138,7 @@
   margin-left: 5px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .progress-bar {
       height: 3px!important;
       width: 250px;
@@ -115,5 +147,17 @@
 
   #current-title {
     max-width: 220px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #player-title-user #current-title {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+  #current-title {
+    max-width: 150px;
   }
 }
