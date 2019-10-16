@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   getSearchData(search){
-    fetch(`https://cors-anywhere.herokuapp.com/https://api-v2.soundcloud.com/search/tracks?q=${search}&sc_a_id=fc452777-f331-4acc-a48b-659cb69718b9&variant_ids=&facet=genre&user_id=707627-191502-502853-114326&client_id=LScyTbJVDLRaeLkwReztU0QTGmyWhbin&limit=25`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://api-v2.soundcloud.com/search/tracks?q=${search}&sc_a_id=fc452777-f331-4acc-a48b-659cb69718b9&variant_ids=&facet=genre&user_id=707627-191502-502853-114326&client_id=fPcvSVYVoQDmIlkJL33irYQTFmkkuvW8&limit=25`)
     .then((response) => response.json())
     .then((r)=>{
       this.setState({
